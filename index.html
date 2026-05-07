@@ -1,0 +1,92 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eclipse Tech Plumbing Solution</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; background: #f5f5f5; }
+    header { background: #0a2540; color: white; padding: 30px 20px; text-align: center; }
+    header h1 { margin: 0; font-size: 28px; }
+    header p { margin: 5px 0 15px; }
+    .cta { background: #25D366; color: white; padding: 12px 20px; border-radius: 5px; text-decoration: none; font-weight: bold; }
+    section { padding: 20px; }
+    .services { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; }
+    .card { background: white; padding: 15px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; }
+    .gallery img { width: 100%; border-radius: 10px; }
+    .urgent { background: red; color: white; text-align: center; padding: 10px; font-weight: bold; }
+    footer { background: #0a2540; color: white; text-align: center; padding: 15px; }
+    .whatsapp-float {
+      position: fixed;
+      width: 60px;
+      height: 60px;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25D366;
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 28px;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body><div class="urgent">🚨 24/7 Emergency Plumbing Services Available - Call Now!</div><header>
+  <h1>Eclipse Tech Plumbing Solution</h1>
+  <p>Fast • Reliable • Professional Plumbing Services</p>
+  <a href="https://wa.me/254796872389?text=Hi, I need plumbing services" class="cta">Chat on WhatsApp</a>
+</header><section>
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="card">Pipework Installation & Repairs</div>
+    <div class="card">Biodigester Installation</div>
+    <div class="card">Water Tank Connection</div>
+    <div class="card">Pump Installation</div>
+    <div class="card">Sanitary Fittings</div>
+    <div class="card">General Plumbing Repairs</div>
+  </div>
+</section><section>
+  <h2>Recent Work</h2>
+  <div class="gallery">
+    <img src="images/plumbing1.jpg">
+    <img src="images/plumbing2.jpg">
+    <img src="images/plumbing3.jpg">
+  </div>
+</section><section>
+  <h2>Why Clients Choose Us</h2>
+  <ul>
+    <li>✔️ Same Day Service</li>
+    <li>✔️ Affordable Pricing</li>
+    <li>✔️ Clean & Professional Work</li>
+    <li>✔️ Trusted by Local Clients</li>
+  </ul>
+</section><section>
+  <h2>Book a Service</h2>
+  <form onsubmit="sendToWhatsApp(event)" style="background:white; padding:20px; border-radius:10px;">
+    <input type="text" id="name" placeholder="Your Name" required style="width:100%; padding:10px; margin:5px 0;">
+    <input type="tel" id="phone" placeholder="Phone Number" required style="width:100%; padding:10px; margin:5px 0;">
+    <input type="text" id="location" placeholder="Location" required style="width:100%; padding:10px; margin:5px 0;">
+    <select id="service" style="width:100%; padding:10px; margin:5px 0;">
+      <option>Pipe Repair</option>
+      <option>Tank Installation</option>
+      <option>Drainage Fix</option>
+      <option>Bathroom Fittings</option>
+    </select>
+    <textarea id="message" placeholder="Describe your problem" style="width:100%; padding:10px; margin:5px 0;"></textarea>
+    <button type="submit" class="cta">Send via WhatsApp</button>
+  </form>
+</section><a href="https://wa.me/254796872389?text=Hi, I need urgent plumbing help" class="whatsapp-float">💬</a>
+
+<script>
+function sendToWhatsApp(event) {
+  event.preventDefault();
+  var text = `New Booking:%0AName: ${name.value}%0APhone: ${phone.value}%0ALocation: ${location.value}%0AService: ${service.value}%0ADetails: ${message.value}`;
+  window.open(`https://wa.me/254796872389?text=${text}`, '_blank');
+}
+</script><footer>
+  <p>📞 0796872389 / 0741272618</p>
+  <p>&copy; 2026 Eclipse Tech Plumbing Solution</p>
+</footer></body>
+</html>
